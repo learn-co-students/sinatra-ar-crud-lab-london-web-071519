@@ -1,0 +1,14 @@
+<h1>Edit your Article</h1>
+<%# <----IMPORTANT ACTION VALUE-----> %>
+<form method="POST" action="/articles/<%= @article.id %>">
+<%# <----IMPORTANT LINE TO OVERRIDE RACK METHOD-----> %>
+<input id="hidden" type="hidden" name="_method" value="PATCH">
+
+<label>Title: </label>
+<input type="text" name="title" value="<%= @article.title %>"><br>
+<label>Content: </label>
+
+<input type="text" name="content" value="<%= @article.content %>"><br>
+<input type="submit" id="Submit">
+</form
+>
