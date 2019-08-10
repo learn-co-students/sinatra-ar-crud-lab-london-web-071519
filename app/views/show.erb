@@ -4,8 +4,8 @@
 <p><%= @article.content %></p>
 
 
-<form method="post" action="/articles/<%= @article.id %>">
-<input type="hidden", id="hidden", name="_method", value="DELETE">
+<form method="post" action="/articles/<%= @article.id %>/delete">
+<input type="hidden", id="hidden", name="_method", value="delete">
 <input type="submit" id="delete" value="delete">
 
 
